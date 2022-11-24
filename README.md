@@ -54,7 +54,31 @@
 
 
 ---
-### tcp 송수신 원리
+### TCP 프로토콜
 ---
 
+
+<img width="412" alt="스크린샷 2022-11-22 오후 9 16 46" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/TCP_Protocol_Diagram.png">
+출처 :https://commons.wikimedia.org/wiki/File:TCP_Protocol_Diagram.png<br/>
+
+-  ` Source port ` :  송신측 포트
+-  ` Destination Port `:  수신측 포트를 의미한다.
+-  `Sequence Number` : 32비트 2의 32승의 가용범위를 갖고 이를 용량으로 환산하면 4GB의 데이터를 표현할 수 있다.
+-  `Acknowledgment Number` : 
+-  `TCP Flags`:
+-  `Window` : 수신측 윈도우 사이즈를 의미한다.
 - 
+
+<br/>
+
+> 3-Way handshake
+
+<img width="412" alt="스크린샷 2022-11-22 오후 9 16 46" src="https://s3.ap-south-1.amazonaws.com/afteracademy-server-uploads/what-is-a-tcp-3-way-handshake-process-three-way-handshaking-establishing-connection-6a724e77ba96e241.jpg">
+출처 : https://afteracademy.com/blog/what-is-a-tcp-3-way-handshake-process 
+
+<br/>
+
+- tcp 에서 클라이언트와 서버를 연결하는 방식이다 . 
+- 세그먼트 단위의 데이터를 클라이언트와 서버가 주고 받으며 서로의 sequence 번호 ,MSS(Maximum Segment Size),혼잡 제어 정책(네트웍에 문제가 있을 경우에 대한 정책 SACK(selective ack knowledgement)가 주로 사용된다.)을 교환한다.
+- MSS가 다를 경우 MSS가 작은 쪽에 맞춰서 전송이 이뤄진다.
+- 보안성을 갖고있지 않기 때문에 작정하면 속일 수 있다.
