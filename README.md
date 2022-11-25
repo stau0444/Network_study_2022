@@ -100,4 +100,14 @@
 
 > L2 스위치의 작동원리와 ARP(Address Resolution protocol)
 
--  
+<img width="601" alt="스크린샷 2022-11-25 오후 7 44 55" src="https://user-images.githubusercontent.com/51349774/203966410-6ff7b554-3198-480a-b366-dd026a59d972.png">
+
+- ARP는 ip주소로 맥주소를 얻어내는 프로토콜을 말한다
+- 위 그림에서 pc3번이 www.naver.com로 요청을 보낸다고 가정할때 자신이 게이트웨이로 설정한 192.168.0.1의 라우터의 맥주소를 얻어내야한다.(항상은 아님)
+- 이때 ARP가 작동하는데 ARP의 과정은 아래와 같다.
+- ARP를 속여 ARP spooping 공격이 가능하다.
+
+1. pc3은 192.168.0.1인 호스트를 찾기위해  broadcast로 같은 네트워크대에 있는 모든 호스트에게 query를 날린다.
+2. 192.168.0.1를 갖는 라우터는 자신의 MAC 주소(reply)를 pc3에게 unicast로 응답한다. 
+3. pc3은 해당 값을 메모리에 저장한다 (ARP cache)
+
